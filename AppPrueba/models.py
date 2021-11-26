@@ -12,7 +12,15 @@ class Mascota(models.Model):
     animal=models.CharField(max_length=20)
     edad=models.IntegerField()
     
+    def __str__(self):
+        return f'La mascotas se llama {self.nombre}'
+    
 class Casa(models.Model):
     escaleras=models.BooleanField()
     numero=models.IntegerField()
     cant_ventanas=models.IntegerField()
+    
+    def __str__(self):
+        return f'Casa numero {self.numero}'
+    
+    
