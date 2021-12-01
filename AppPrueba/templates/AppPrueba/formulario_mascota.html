@@ -1,0 +1,15 @@
+{% extends 'AppPrueba/inicio.html' %}
+{% block head_block %}
+    <title>Crear Mascota</title>
+{% endblock head_block %}
+
+{% block body_block %}
+    <h1>Crear Mascota</h1>
+
+    <form action={% url 'Crear_mascota' %} method="POST">
+        {% csrf_token %}
+        {{formulario.as_table}}
+        <input type="submit" value="Crear"/>
+    </form>
+
+{% endblock body_block %}

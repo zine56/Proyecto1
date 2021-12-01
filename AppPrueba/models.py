@@ -6,7 +6,9 @@ class Vecino(models.Model):
     nombre=models.CharField(max_length=20)
     apellido=models.CharField(max_length=20)
     numero=models.IntegerField()
-    
+    def __str__(self):
+        return f'Vecino se llama {self.nombre}'
+
 class Mascota(models.Model):
     nombre=models.CharField(max_length=20)
     animal=models.CharField(max_length=20)
